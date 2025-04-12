@@ -4,10 +4,9 @@ import requests
 import math
 import pandas as pd
 
-import os
-
-ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
-FMP_API_KEY = os.getenv("FMP_API_KEY")
+# Securely load API keys from Streamlit secrets
+FMP_API_KEY = st.secrets["FMP_API_KEY"]
+ALPHA_VANTAGE_API_KEY = st.secrets["ALPHA_VANTAGE_API_KEY"]
 
 st.set_page_config(page_title="Buffett-Style Stock Dashboard", layout="wide")
 st.title("\U0001F4CA Buffett-Style Stock Dashboard")
